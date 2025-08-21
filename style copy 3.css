@@ -213,6 +213,8 @@ body{
             font-size: 12px;
             position: relative;
             box-shadow: inset 0 0 0 1px #b48fe3;
+                          -webkit-tap-highlight-color: transparent;
+
 
 
         }
@@ -317,4 +319,5 @@ body{
     
 }
 /*
+
 
