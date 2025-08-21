@@ -290,6 +290,24 @@ body{
 }
 
 
+.entry a{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #9772c7;
+    right: -50px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.entry a:hover{
+    background-color: #a782d6;
+}
+.entry a:active{
+    background-color: #b791e9;
+    scale: 0.95;
+}
+
+
 /*
 @media (max-width:600px){
     .entry{
@@ -299,3 +317,4 @@ body{
     
 }
 /*
+
