@@ -1,0 +1,299 @@
+*{
+    padding: 0;margin: 0;border: 0;
+    transition-property: all;
+    transition-duration: 0.2s;
+}
+
+body{
+        background-color: #d8c3f4;
+        background-color: #f3e8ff;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: default;
+}
+
+.container{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.scroll{
+    width: 600px;
+    max-width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: fit-content;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    background-color: blueviolet;
+    z-index: 900;
+}
+
+.year-overlay,.month-overlay,.day-overlay{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.day-overlay{
+    row-gap: 13.5px;
+}
+
+.year{
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+    background-color: #b89bde;
+    color: white;
+    width: 100%;
+    height: 18px;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    z-index: 400;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.month{
+    position: sticky;
+    top: 18px;
+    box-sizing: border-box;
+    background-color: #c6aaea;
+    color: white;
+    width: 100%;
+    height: 16px;
+    padding-left: 15px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    z-index: 300;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.day{
+    position: sticky;
+    top: 40px;
+    width: 100%;
+    height: 12px;
+    font-size: 14px;
+    z-index: 200;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    font-weight: 600;
+    color: white;
+    padding-left: 15px;
+    margin-top: 6px;
+    margin-bottom: 3px;
+    text-shadow: 2px 2px 4px #c6aaea;
+}
+
+.entry{
+    box-sizing: border-box;
+    width: 80%;
+    height: fit-content;
+    min-height: 48px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: blueviolet;
+    padding: 3px 3px 3px 7px;
+    box-shadow:0px 0px 0 1.5px #ba95ea, 2px 2px 4px #c6aaea;
+        box-shadow:0px 0px 0 2px #ba95ea;
+            box-shadow:0px 0px 0 1.3px #c3a1ef,2px 2px 4px 0 #ba95ea7d;
+
+
+    position: relative;
+    background-color: white;
+        background-color: #e0cff8;
+
+    border: solid 4px #e0cff8;
+
+}
+
+.entry .time{
+    position: absolute;
+    left: -42px;
+    font-size: 12px;
+    transform: scale(0.8) translateY(12px);
+    font-weight: 550;
+    color: #9f76d48f;
+    background-color: #e5d4fc;
+    background-color: #e4ceffca;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.entry:hover .time{
+    color: white;
+    color: #a984d9;
+            color: #9f76d4;
+                        color: #9772c7;
+
+
+
+}
+
+
+.entry .top{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 23px;
+    height: fit-content;
+}
+
+    .entry .top strong{
+        width: fit-content;
+        min-height: 21px;
+        height: 21px;
+        display: flex;
+        flex-direction: row;
+        font-size: 14px;
+        font-size: 16px;
+        font-weight: 900;
+        color: #9f76d4;
+            overflow: hidden;
+            text-transform: uppercase;
+                    margin-right: 6px;
+
+    }
+    .entry:hover .top strong{
+        height: fit-content;
+    }
+
+
+    .entry .top .tags{
+        width: fit-content;
+        height: 21px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 4px;
+    }
+        .entry .top .tags .tag{
+            box-sizing: border-box;
+            width: 24px;
+            height: 24px;
+            background-color: #e5d4fc;
+            background-color: #e0cff7;
+            background-color: #dccbf1;
+            background-color: #bfa1e6;
+            background-color: #c5abe8;
+            border-radius: 100%;
+            cursor: pointer;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            position: relative;
+            box-shadow: inset 0 0 0 1px #b48fe3;
+
+
+        }
+        .entry .top .tags .tag:hover{
+            background-color: #b48fe3;
+            /*1px 1px 2px #c6aaea,*/
+        }
+        /*
+        .entry .top .tags .tag .infobox::before{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-bottom: 11px solid #e0cff7;
+            top: -4px;
+            right: -5px;
+            transform: scale(0.7) rotate(45deg);
+
+        }
+            */
+        .entry .top .tags .tag .infobox{
+            position: absolute;
+            background-color: #e0cff7;
+            background-color: #cdb3ee;
+            min-width: 70px;
+            width: fit-content;
+            height: 40px;
+            top: 25px;
+            right: 21px;
+            cursor: default;
+            z-index: 700;
+            visibility: hidden;
+            opacity: 0;
+            box-shadow:0px 0px 0 1.3px #c3a1ef, 2px 2px 4px #c6aaea;
+            border-radius: 5px;
+            border-top-right-radius: 0;
+            margin-top: 6px;
+            transform: scaleY(0.7) scaleX(0.7) scale(0.7);
+            transform-origin: top right;
+        }
+        .entry .top .tags .tag:hover .infobox{
+            visibility: visible;
+            opacity: 1;
+            transform: scaleY(1) scaleX(1) scale(1);
+        }
+
+        .entry .top .tags .tag .infobox h1{
+            font-size: 12px;
+            width: 100%;
+            text-align: center;
+            color: #a984d9;
+            font-weight: 900;
+        }
+
+
+.entry .bottom{
+    width: fit-content;
+    min-height: 14.4px;
+    height: 14.4px;
+    font-size: 12.5px;
+    font-weight: 550;
+    overflow: hidden;
+    display: flex;
+    color: #b48fe3;
+    color: #9f76d4;
+    color: #b694e2;
+    margin-top: 2.6px;
+    margin-bottom: 2;
+
+}
+.entry:hover .bottom{
+    height: fit-content;
+}
+
+
+/*
+@media (max-width:600px){
+    .entry{
+        height: 40px;
+        min-height: 40px;
+    }
+    
+}
+/*
